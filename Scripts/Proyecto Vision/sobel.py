@@ -10,7 +10,7 @@ import argparse
 import matplotlib.pyplot as plt
 from convolution import convolution
 from gaussian_blur import gaussian_blur
- 
+  
  
 def sobel_edge_detection(image, filter, verbose=False):
     new_image_x = convolution(image, filter, verbose)
