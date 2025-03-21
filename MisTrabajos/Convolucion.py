@@ -70,7 +70,7 @@ def main():
     plt.title("Imagen con Padding")
     plt.axis('off')
 
-    # Mostrar imagen después de convolución
+    # Mostrar imagen despues de convolución
     plt.subplot(1, 3, 3)
     plt.imshow(convoluted_image, cmap='gray')
     plt.title("Imagen con Convolucion")
