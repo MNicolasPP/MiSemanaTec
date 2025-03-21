@@ -16,7 +16,7 @@ def apply_padding(image, kernel_shape, extra_padding=5):
     padded_image[pad_height:pad_height + image.shape[0], pad_width:pad_width + image.shape[1]] = image
     return padded_image
 
-def convolution(image, kernel, average=False, extra_padding=20):
+def convolution(image, kernel, average=False, extra_padding=5):
     """Aplica convolución a una imagen con un kernel específico."""
     if len(image.shape) == 3:
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -40,8 +40,7 @@ def convolution(image, kernel, average=False, extra_padding=20):
     return padded_image, output
 
 def main():
-    # Ruta de la imagen (asegúrate de que el archivo existe)
-    image_path = "images/img2.jpg"  # Cambia a "img2.jpg" si quieres probar con otra imagen
+    image_path = "images/img1.jpg"  
     image = cv2.imread(image_path)
 
     if image is None:
@@ -63,7 +62,7 @@ def main():
     ])
 
     # Aplicar convolución y obtener imagen con padding
-    padded_image, convoluted_image = convolution(image, kernel, average=False, extra_padding=5)
+    padded_image, convoluted_image = convolution(image, kernel, average=False, extra_padding=20)
 
     # Mostrar imagen con padding
     plt.subplot(1, 3, 2)
