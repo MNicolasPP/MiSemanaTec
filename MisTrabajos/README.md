@@ -9,8 +9,6 @@ Devuelve la imagen con padding aplicado.
 ### 🖼️ Ejemplo Visual de Cómo Funciona
 Supongamos que la imagen original es:
 
-Copiar
-Editar
 | 1 | 2 | 3 |
 |-------|-------|-------|
 | 4  | 5   | 6   |
@@ -33,11 +31,12 @@ Si la imagen tiene 3 canales (RGB), la convierte a escala de grises (cv2.COLOR_B
 Obtiene el tamaño de la imagen y el del kernel.
 Aplica padding a la imagen usando apply_padding().
 Crea una imagen vacía output donde se guardarán los valores de la convolución.
+
 Bucle de convolución:
-Recorre la imagen pixel por pixel.
-Extrae una región del mismo tamaño que el kernel.
-Multiplica la región con el kernel y suma los valores (np.sum()).
-Si average=True, divide el resultado entre el tamaño del kernel para hacer un suavizado.
+- Recorre la imagen pixel por pixel.
+- Extrae una región del mismo tamaño que el kernel.
+- Multiplica la región con el kernel y suma los valores (np.sum()).
+- Si average=True, divide el resultado entre el tamaño del kernel para hacer un suavizado.
 
 #### 📌 ¿Qué es la convolución? 
 Es una operación matemática donde aplicamos un filtro (kernel) sobre una imagen para resaltar características como bordes, desenfoque o nitidez.
