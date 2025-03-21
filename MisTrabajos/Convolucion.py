@@ -41,7 +41,7 @@ def convolution(image, kernel, average=False, extra_padding=20):
 
 def main():
     # Ruta de la imagen (asegúrate de que el archivo existe)
-    image_path = "images/img1.jpg"  # Cambia a "img2.jpg" si quieres probar con otra imagen
+    image_path = "images/img2.jpg"  # Cambia a "img2.jpg" si quieres probar con otra imagen
     image = cv2.imread(image_path)
 
     if image is None:
