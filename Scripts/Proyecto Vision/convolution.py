@@ -28,9 +28,12 @@ def convolution(image, kernel, average=False, verbose=False):
     kernel_row, kernel_col = kernel.shape
  
     output = np.zeros(image.shape)
- 
-    pad_height = int((kernel_row - 1) / 2)
-    pad_width = int((kernel_col - 1) / 2)
+
+    extra_padding = 5  # simplemente cambia esta variabla para obtener un mayor 
+
+    pad_height = int((kernel_row - 1) / 2) + extra_padding
+    pad_width = int((kernel_col - 1) / 2) + extra_padding
+
  
     padded_image = np.zeros((image_row + (2 * pad_height), image_col + (2 * pad_width)))
  
